@@ -36,6 +36,7 @@ public class ClienteBronce extends Cliente {
     public ClienteBronce (String nombre, int identificacion, char categoria, short edad) {
         super(nombre, identificacion, categoria, edad);
         pedidoGratisDisponible = true;
+        pedidosDelMes = 0;
         descuentoAcumulado = 0;
         fechaUltimoPedido = "No hay pedidos realizados";
     }
@@ -105,11 +106,11 @@ public class ClienteBronce extends Cliente {
           a partir de la clase hija ClienteBronce
     */
     @Override
-    public String toString(ClienteBronce clienteBronce) {
-        if (clienteBronce.getPedidoGratisDisponible() == true) {
-            return "Cliente Membresía Bronce { nombre = " + clienteBronce.getNombre() + ", identificación = " + clienteBronce.getIdentificacion() + ", categoria = " + clienteBronce.getCategoria() + ", edad = " + clienteBronce.getEdad() + ",  tiene pedido gratis disponible = no tiene, pedidos del mes = " + clienteBronce.getPedidosDelMes() + ", descuento acumulado = " + clienteBronce.getDescuentoAcumulado() + ", fecha último pedido" + clienteBronce.getFechaUltimoPedido();
-        } else {
+    public String toString() {
+        if (pedidoGratisDisponible) {
             return "Cliente Membresía Bronce { nombre = " + clienteBronce.getNombre() + ", identificación = " + clienteBronce.getIdentificacion() + ", categoria = " + clienteBronce.getCategoria() + ", edad = " + clienteBronce.getEdad() + ",  tiene pedido gratis disponible = si tiene, pedidos del mes = " + clienteBronce.getPedidosDelMes() + ", descuento acumulado = " + clienteBronce.getDescuentoAcumulado() + ", fecha último pedido" + clienteBronce.getFechaUltimoPedido();
+        } else {
+            return "Cliente Membresía Bronce { nombre = " + clienteBronce.getNombre() + ", identificación = " + clienteBronce.getIdentificacion() + ", categoria = " + clienteBronce.getCategoria() + ", edad = " + clienteBronce.getEdad() + ",  tiene pedido gratis disponible = no tiene, pedidos del mes = " + clienteBronce.getPedidosDelMes() + ", descuento acumulado = " + clienteBronce.getDescuentoAcumulado() + ", fecha último pedido" + clienteBronce.getFechaUltimoPedido();
         }
     }
 }
