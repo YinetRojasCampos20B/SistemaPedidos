@@ -78,4 +78,14 @@ public class Cliente {
     public void setEdad(short edad) {
         this.edad = edad;
     }
+
+
+    // Método override para mostrar en consola los datos
+
+    @Override
+    public String toString () {
+        return "Cliente { nombre = '"+ nombre + "', identificacion = " + identificacion + ", categoria = " + categoria + ", edad = " + edad + "}";
+
+    }
+
 }
