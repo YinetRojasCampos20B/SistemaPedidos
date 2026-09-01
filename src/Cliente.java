@@ -27,19 +27,19 @@ public class Cliente {
     // Constructor de Cliente que recibe los atributos nombre, identificación y edad, sin categoria
 
     public Cliente (String nombre, int identificacion, short edad) {
-        this(nombre, identificacion, edad, 'N');
+        this(nombre, identificacion, 'N', edad);
     }
 
     // Constructor de Cliente que recibe los atributos nombre, identificación y categoría, sin edad
 
-    public Cliente (int identificacion, char categoria, String nombre) {
-        this(identificacion, categoria, nombre, 0);
+    public Cliente (String nombre, int identificacion, char categoria) {
+        this(nombre, identificacion, categoria, (short) 0); // Casteo a tipo de dato short
     }
 
     // Getters y setters de la superclase Cliente
 
     // Nombre
-    
+
     public String getNombre() {
         return nombre;
     }
