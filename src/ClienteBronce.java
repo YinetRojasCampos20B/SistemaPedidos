@@ -40,6 +40,23 @@ public class ClienteBronce extends Cliente {
         fechaUltimoPedido = "No hay pedidos realizados";
     }
 
+    /*
+    public ClienteBronce(String nombre, int identificacion, char categoria, short edad) {
+        this(pedidoGratisDisponible, pedidosDelMes);
+        P
+        E
+        N
+        D
+        I
+        E
+        N
+        T
+        E
+    }
+
+     */
+
+    
 
 
 }
