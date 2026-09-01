@@ -24,6 +24,20 @@ public class Cliente {
 
     }
 
+    // Constructor de Cliente que recibe los atributos nombre, identificación y edad, sin categoria
+
+    public Cliente (String nombre, int identificacion, short edad) {
+        this(nombre, identificacion, edad, 'N');
+    }
+
+    // Constructor de Cliente que recibe los atributos nombre, identificación y categoría, sin edad
+
+    public Cliente (int identificacion, char categoria, String nombre) {
+        this(identificacion, categoria, nombre, 0);
+    }
+
+
+
 
 
 }
