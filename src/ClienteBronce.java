@@ -6,10 +6,10 @@ public class ClienteBronce extends Cliente {
 
     // Atributos de la clase hija ClienteBronce
 
-    boolean pedidoGratisDisponible;
-    int pedidosDelMes;
-    double descuentoAcumulado;
-    String fechaUltimoPedido;
+    private boolean pedidoGratisDisponible;
+    private int pedidosDelMes;
+    private double descuentoAcumulado;
+    private String fechaUltimoPedido;
 
     // Constructores de la clase hija ClienteBronce
 
