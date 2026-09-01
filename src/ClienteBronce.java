@@ -41,22 +41,21 @@ public class ClienteBronce extends Cliente {
         fechaUltimoPedido = "No hay pedidos realizados";
     }
 
+
     /*
-    public ClienteBronce(String nombre, int identificacion, char categoria, short edad) {
-        this(pedidoGratisDisponible, pedidosDelMes);
-        P
-        E
-        N
-        D
-        I
-        E
-        N
-        T
-        E
+    * Constructor que reciba como parámetros los atributos de la superclase Cliente
+    (nombre, identificacion, categoria y edad), los pedidos del mes y la fecha del último pedido
+    * estableciendo el pedido gratis disponible como falso y el descuento acumulado en 0
+    * */
+
+    public ClienteBronce(String nombre, int identificacion, char categoria, short edad, int pedidosDelMes, String fechaUltimoPedido) {
+        super(nombre, identificacion, categoria, edad);
+        this.pedidosDelMes = pedidosDelMes;
+        pedidoGratisDisponible = false;
+        descuentoAcumulado = 0;
+       this.fechaUltimoPedido = fechaUltimoPedido;
+
     }
-
-     */
-
 
     /*
     GETTERS Y SETTERS DE LA CLASE HIJA CLIENTE BRONCE
@@ -108,9 +107,9 @@ public class ClienteBronce extends Cliente {
     @Override
     public String toString() {
         if (pedidoGratisDisponible) {
-            return "Cliente Membresía Bronce { nombre = " + clienteBronce.getNombre() + ", identificación = " + clienteBronce.getIdentificacion() + ", categoria = " + clienteBronce.getCategoria() + ", edad = " + clienteBronce.getEdad() + ",  tiene pedido gratis disponible = si tiene, pedidos del mes = " + clienteBronce.getPedidosDelMes() + ", descuento acumulado = " + clienteBronce.getDescuentoAcumulado() + ", fecha último pedido" + clienteBronce.getFechaUltimoPedido();
+            return "Cliente Membresía Bronce { nombre = " + getNombre() + ", identificación = " + getIdentificacion() + ", categoria = " + getCategoria() + ", edad = " + getEdad() + ",  tiene pedido gratis disponible = si tiene, pedidos del mes = " + pedidosDelMes + ", descuento acumulado = " + descuentoAcumulado + ", fecha último pedido" + fechaUltimoPedido+"}";
         } else {
-            return "Cliente Membresía Bronce { nombre = " + clienteBronce.getNombre() + ", identificación = " + clienteBronce.getIdentificacion() + ", categoria = " + clienteBronce.getCategoria() + ", edad = " + clienteBronce.getEdad() + ",  tiene pedido gratis disponible = no tiene, pedidos del mes = " + clienteBronce.getPedidosDelMes() + ", descuento acumulado = " + clienteBronce.getDescuentoAcumulado() + ", fecha último pedido" + clienteBronce.getFechaUltimoPedido();
+            return "Cliente Membresía Bronce { nombre = " + getNombre() + ", identificación = " + getIdentificacion() + ", categoria = " + getCategoria() + ", edad = " + getEdad() + ",  tiene pedido gratis disponible = no tiene, pedidos del mes = " + pedidosDelMes + ", descuento acumulado = " + descuentoAcumulado + ", fecha último pedido" + fechaUltimoPedido+"}";
         }
     }
 }
