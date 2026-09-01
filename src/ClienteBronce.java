@@ -56,7 +56,60 @@ public class ClienteBronce extends Cliente {
 
      */
 
-    
 
+    /*
+    GETTERS Y SETTERS DE LA CLASE HIJA CLIENTE BRONCE
+    */
 
+    // Pedido gratis disponible
+
+    public boolean getPedidoGratisDisponible() {
+        return pedidoGratisDisponible;
+    }
+
+    public void setPedidoGratisDisponible(boolean pedidoGratisDisponible) {
+        this.pedidoGratisDisponible = pedidoGratisDisponible;
+    }
+
+    // Pedidos del mes
+
+    public int getPedidosDelMes() {
+        return pedidosDelMes;
+    }
+
+    public void setPedidosDelMes(int pedidosDelMes) {
+        this.pedidosDelMes = pedidosDelMes;
+    }
+
+    // Descuento acumulado
+
+    public double getDescuentoAcumulado() {
+        return descuentoAcumulado;
+    }
+
+    public void setDescuentoAcumulado(double descuentoAcumulado) {
+        this.descuentoAcumulado = descuentoAcumulado;
+    }
+
+    // Fecha del último pedido realizado
+
+    public String getFechaUltimoPedido() {
+        return fechaUltimoPedido;
+    }
+
+    public void setFechaUltimoPedido(String fechaUltimoPedido) {
+        this.fechaUltimoPedido = fechaUltimoPedido;
+    }
+
+    /* Método override sobreescrito para mostrar en consola los datos de los objetos creados
+          a partir de la clase hija ClienteBronce
+    */
+    @Override
+    public String toString(ClienteBronce clienteBronce) {
+        if (clienteBronce.getPedidoGratisDisponible() == true) {
+            return "Cliente Membresía Bronce { nombre = " + clienteBronce.getNombre() + ", identificación = " + clienteBronce.getIdentificacion() + ", categoria = " + clienteBronce.getCategoria() + ", edad = " + clienteBronce.getEdad() + ",  tiene pedido gratis disponible = no tiene, pedidos del mes = " + clienteBronce.getPedidosDelMes() + ", descuento acumulado = " + clienteBronce.getDescuentoAcumulado() + ", fecha último pedido" + clienteBronce.getFechaUltimoPedido();
+        } else {
+            return "Cliente Membresía Bronce { nombre = " + clienteBronce.getNombre() + ", identificación = " + clienteBronce.getIdentificacion() + ", categoria = " + clienteBronce.getCategoria() + ", edad = " + clienteBronce.getEdad() + ",  tiene pedido gratis disponible = si tiene, pedidos del mes = " + clienteBronce.getPedidosDelMes() + ", descuento acumulado = " + clienteBronce.getDescuentoAcumulado() + ", fecha último pedido" + clienteBronce.getFechaUltimoPedido();
+        }
+    }
 }
