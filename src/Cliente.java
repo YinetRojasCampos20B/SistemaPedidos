@@ -36,8 +36,46 @@ public class Cliente {
         this(identificacion, categoria, nombre, 0);
     }
 
+    // Getters y setters de la superclase Cliente
+
+    // Nombre
+    
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    // Identificación
+
+    public int getIdentificacion() {
+        return identificacion;
+    }
+
+    public void setIdentificacion(int identificacion) {
+        this.identificacion = identificacion;
+    }
+
+    // Categoría
+
+    public char getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(char categoria) {
+        this.categoria = categoria;
+    }
+
+    // Edad
 
 
+    public short getEdad() {
+        return edad;
+    }
 
-
+    public void setEdad(short edad) {
+        this.edad = edad;
+    }
 }
