@@ -42,4 +42,17 @@ public class ClienteDorado extends Cliente {
         this.montoDescuentoCompra = montoDescuentoCompra;
         this.descuentoCompraUsado = descuentoCompraUsado;
     }
+
+    /*
+    Método constructor que recibe como parámetros los atributos de la clase madre Cliente (nombre, identificación ,categoría y edad) y los atributos de la clase ClienteDorado, como el total de pedidos histórico, el monto descuento de la compra y si ya usó el descuento de compra), estableciendo por defecto los pedidos gratis restantes en seis (6) y el descuento de la compra en false
+    Se usa cuando un cliente ordinario asciente a la membresía dorada
+     */
+
+    public ClienteDorado(String nombre, int identificacion, char categoria, short edad, int totalPedidosHistorico, double montoDescuentoCompra) {
+        super(nombre, identificacion, categoria, edad);
+        pedidosGratisRestantes = 6;
+        this.totalPedidosHistorico = totalPedidosHistorico;
+        this.montoDescuentoCompra = montoDescuentoCompra;
+        descuentoCompraUsado = false;
+    }
 }
