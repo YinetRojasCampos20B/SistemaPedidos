@@ -99,4 +99,15 @@ public class Producto {
         this.categoria = categoria;
     }
 
+    // Método para modificar la impresión de datos en consola para la clase Producto
+
+    public String toString() {
+        if (disponible) {
+            return "Producto: "+" nombre = "+nombre+ ", precio = "+precio+", código = "+codigo+", disponible = con existencias, categoría = "+categoria+"}";
+        } else {
+            return "Producto: "+" nombre = "+nombre+ ", precio = "+precio+", código = "+codigo+", disponible = sin existencias, categoría = "+categoria+"}";
+
+        }
+    }
+
 }
