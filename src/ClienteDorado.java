@@ -6,10 +6,10 @@ public class ClienteDorado extends Cliente {
 
     // Atributos de la clase hija ClienteDorado
 
-    private final short pedidosGratisRestantes;
-    private final int totalPedidosHistorico;
-    private final double montoDescuentoCompra;
-    private final boolean descuentoCompraUsado;
+    private short pedidosGratisRestantes;
+    private int totalPedidosHistorico;
+    private double montoDescuentoCompra;
+    private boolean descuentoCompraUsado;
 
     /*
     * MÉTODOS CONSTRUCTORES DE LA CLASE HIJA
@@ -54,5 +54,16 @@ public class ClienteDorado extends Cliente {
         this.totalPedidosHistorico = totalPedidosHistorico;
         this.montoDescuentoCompra = montoDescuentoCompra;
         descuentoCompraUsado = false;
+    }
+
+    /* Método override sobreescrito para mostrar en consola los datos de los objetos creados a partir de la clase hija ClienteDorado
+        */
+    @Override
+    public String toString() {
+        if (descuentoCompraUsado) {
+            return "Cliente Membresía Dorado { nombre = " + getNombre() + ", identificación = " + getIdentificacion() + ", categoria = " + getCategoria() + ", edad = " + getEdad() + ",  ha usado su descuento de compra = si, total de pedidos históricos = " + totalPedidosHistorico + ", monto de descuento de compra = " + montoDescuentoCompra + ", pedidos restantes = " + pedidosGratisRestantes+"}";
+        } else {
+            return "Cliente Membresía Dorado { nombre = " + getNombre() + ", identificación = " + getIdentificacion() + ", categoria = " + getCategoria() + ", edad = " + getEdad() + ",  ha usado su descuento de compra = no, total de pedidos históricos = " + totalPedidosHistorico + ", monto de descuento de compra = " + montoDescuentoCompra + ", pedidos restantes = " + pedidosGratisRestantes+"}";
+        }
     }
 }
