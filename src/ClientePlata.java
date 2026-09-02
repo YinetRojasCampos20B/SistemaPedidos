@@ -67,5 +67,45 @@ public class ClientePlata extends Cliente {
         cashbackDisponibleEsteSemestre = true;
     }
 
+    // GETTERS Y SETTERS DE LA CLASE HIJA CLIENTE PLATA
 
+    // Probabilidad de cashback
+
+    public double getProbabilidadCashback() {
+        return probabilidadCashback;
+    }
+
+    public void setProbabilidadCashback(double probabilidadCashback) {
+        this.probabilidadCashback = probabilidadCashback;
+    }
+
+    // Cashback disponible este semestre
+
+    public boolean getCashbackDisponibleEsteSemestre() {
+        return cashbackDisponibleEsteSemestre;
+    }
+
+    public void setCashbackDisponibleEsteSemestre(boolean cashbackDisponibleEsteSemestre) {
+        this.cashbackDisponibleEsteSemestre = cashbackDisponibleEsteSemestre;
+    }
+
+    // Compras en el semestre
+
+    public int getComprasEnSemestre() {
+        return comprasEnSemestre;
+    }
+
+    public void setComprasEnSemestre(int comprasEnSemestre) {
+        this.comprasEnSemestre = comprasEnSemestre;
+    }
+
+    // Fecha del último cashback
+
+    public String getFechaUltimoCashback() {
+        return fechaUltimoCashback;
+    }
+
+    public void setFechaUltimoCashback(String fechaUltimoCashback) {
+        this.fechaUltimoCashback = fechaUltimoCashback;
+    }
 }
