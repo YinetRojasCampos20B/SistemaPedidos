@@ -25,4 +25,20 @@ public class Producto {
         this.codigo = codigo;
         this.disponible = disponible;
     }
+
+    /*
+    Método constructor que ayudará a construir un objeto de tipo Producto sin disponibilidad conocida
+    * */
+
+    public Producto(String nombre, double precio, int codigo) {
+        this(nombre, precio, codigo, false);
+    }
+
+    /*
+    * Método constructor que ayudará a modelar un objeto de tipo Producto sin código particular, es decir, que no haya sido categorizado
+    * */
+
+    public Producto(String nombre, double precio, boolean disponible) {
+        this(nombre, precio, 0, disponible);
+    }
 }
