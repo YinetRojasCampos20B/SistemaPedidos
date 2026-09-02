@@ -81,7 +81,7 @@ public class Producto {
 
     // Disponible
 
-    public boolean isDisponible() {
+    public boolean getDisponible() {
         return disponible;
     }
 
@@ -100,6 +100,8 @@ public class Producto {
     }
 
     // Método para modificar la impresión de datos en consola para la clase Producto
+
+    @Override
 
     public String toString() {
         if (disponible) {
