@@ -66,4 +66,45 @@ public class ClienteDorado extends Cliente {
             return "Cliente Membresía Dorado { nombre = " + getNombre() + ", identificación = " + getIdentificacion() + ", categoria = " + getCategoria() + ", edad = " + getEdad() + ",  ha usado su descuento de compra = no, total de pedidos históricos = " + totalPedidosHistorico + ", monto de descuento de compra = " + montoDescuentoCompra + ", pedidos restantes = " + pedidosGratisRestantes+"}";
         }
     }
+
+    // GETTERS Y SETTERS DE LA CLASE HIJA CLIENTE DORADO
+
+    // Pedidos gratis restantes
+    public short getPedidosGratisRestantes() {
+        return pedidosGratisRestantes;
+    }
+
+    public void setPedidosGratisRestantes(short pedidosGratisRestantes) {
+        this.pedidosGratisRestantes = pedidosGratisRestantes;
+    }
+
+    // Total de pedidos histórico
+
+    public int getTotalPedidosHistorico() {
+        return totalPedidosHistorico;
+    }
+
+    public void setTotalPedidosHistorico(int totalPedidosHistorico) {
+        this.totalPedidosHistorico = totalPedidosHistorico;
+    }
+
+    // Monto descuento de compra
+
+    public double getMontoDescuentoCompra() {
+        return montoDescuentoCompra;
+    }
+
+    public void setMontoDescuentoCompra(double montoDescuentoCompra) {
+        this.montoDescuentoCompra = montoDescuentoCompra;
+    }
+
+    // Descuento de compra usado
+
+    public boolean setDescuentoCompraUsado() {
+        return descuentoCompraUsado;
+    }
+
+    public void setDescuentoCompraUsado(boolean descuentoCompraUsado) {
+        this.descuentoCompraUsado = descuentoCompraUsado;
+    }
 }
