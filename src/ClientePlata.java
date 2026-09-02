@@ -116,9 +116,9 @@ public class ClientePlata extends Cliente {
     @Override
     public String toString() {
         if (cashbackDisponibleEsteSemestre) {
-            return "Cliente Membresía Plata { nombre = " + getNombre() + ", identificación = " + getIdentificacion() + ", categoria = " + getCategoria() + ", edad = " + getEdad() + ",  probabilidad de cashback = " + probabilidadCashback + ", cashback  disponible este semestre = sí tiene, compras en el semestre "+comprasEnSemestre+" fecha último cashback = " + fechaUltimoCashback+"}";
+            return "Cliente Membresía Plata { nombre = " + getNombre() + ", identificación = " + getIdentificacion() + ", categoria = " + getCategoria() + ", edad = " + getEdad() + ",  probabilidad de cashback = " + probabilidadCashback + ", cashback  disponible este semestre = sí tiene, compras en el semestre "+comprasEnSemestre+", fecha último cashback = " + fechaUltimoCashback+"}";
         } else {
-            return "Cliente Membresía Plata { nombre = " + getNombre() + ", identificación = " + getIdentificacion() + ", categoria = " + getCategoria() + ", edad = " + getEdad() + ",  probabilidad de cashback = " + probabilidadCashback + ", cashback  disponible este semestre = no tiene, compras en el semestre "+comprasEnSemestre+" fecha último cashback = " + fechaUltimoCashback+"}";
+            return "Cliente Membresía Plata { nombre = " + getNombre() + ", identificación = " + getIdentificacion() + ", categoria = " + getCategoria() + ", edad = " + getEdad() + ",  probabilidad de cashback = " + probabilidadCashback + ", cashback  disponible este semestre = no tiene, compras en el semestre "+comprasEnSemestre+", fecha último cashback = " + fechaUltimoCashback+"}";
         }
     }
 }
