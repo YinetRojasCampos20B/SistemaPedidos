@@ -44,7 +44,59 @@ public class Producto {
         this(nombre, precio, 0, disponible, 'N');
     }
 
+    /*
+    * GETTERS Y SETTERS
+    * PARA LA CLASE PRODUCTO
+    * */
 
+    // Nombre
 
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    // Precio
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    // Código
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
+    // Disponible
+
+    public boolean isDisponible() {
+        return disponible;
+    }
+
+    public void setDisponible(boolean disponible) {
+        this.disponible = disponible;
+    }
+
+    // Categoría
+
+    public char getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(char categoria) {
+        this.categoria = categoria;
+    }
 
 }
