@@ -108,4 +108,17 @@ public class ClientePlata extends Cliente {
     public void setFechaUltimoCashback(String fechaUltimoCashback) {
         this.fechaUltimoCashback = fechaUltimoCashback;
     }
+
+    /* Método override sobreescrito para mostrar en consola los datos de los objetos creados
+          a partir de la clase hija ClientePlata
+    */
+
+    @Override
+    public String toString() {
+        if (cashbackDisponibleEsteSemestre) {
+            return "Cliente Membresía Plata { nombre = " + getNombre() + ", identificación = " + getIdentificacion() + ", categoria = " + getCategoria() + ", edad = " + getEdad() + ",  probabilidad de cashback = " + probabilidadCashback + ", cashback  disponible este semestre = sí tiene, compras en el semestre "+comprasEnSemestre+" fecha último cashback = " + fechaUltimoCashback+"}";
+        } else {
+            return "Cliente Membresía Plata { nombre = " + getNombre() + ", identificación = " + getIdentificacion() + ", categoria = " + getCategoria() + ", edad = " + getEdad() + ",  probabilidad de cashback = " + probabilidadCashback + ", cashback  disponible este semestre = no tiene, compras en el semestre "+comprasEnSemestre+" fecha último cashback = " + fechaUltimoCashback+"}";
+        }
+    }
 }
