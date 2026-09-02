@@ -34,6 +34,17 @@ public class ClientePlata extends Cliente {
 
     }
 
+    /*
+    *
+    * Método constructor que
+    *
+    * */
+
+    public ClientePlata() {
+
+
+    }
+
 
 
 }
