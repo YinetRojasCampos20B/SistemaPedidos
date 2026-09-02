@@ -10,4 +10,19 @@ public class Producto {
     private double precio;
     private int codigo;
     private boolean disponible;
+
+    /*
+    * MÉTODOS CONSTRUCTORES DE LA SUPERCLASE PRODUCTO
+    * */
+
+    /*
+    * Método constructor de la superclase Producto, encargada de modelar los atributos del objeto recibiendo su nombre, precio, código y su disponibilidad
+    * */
+
+    public Producto(String nombre, double precio, int codigo, boolean disponible) {
+        this.nombre = nombre;
+        this.precio = precio;
+        this.codigo = codigo;
+        this.disponible = disponible;
+    }
 }
