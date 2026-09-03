@@ -26,10 +26,12 @@ public class Pedido {
 
     // Método para calcular el total de una compra hecha por el cliente
 
-    public double calcularTotalCompra(Producto[] productos) {
-        for (int i = 0; i < productos.length; i++) {
-            total += productos[i].getPrecio();
+    public double calcularTotalCompra() {
+        double suma = 0;
+        for (int i = 0; i < cantidadProductos; i++) {
+            suma += productos[i].getPrecio();
         }
+        total = suma;
         return total;
     }
 
