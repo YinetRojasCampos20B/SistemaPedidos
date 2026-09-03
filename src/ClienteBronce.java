@@ -46,8 +46,7 @@ public class ClienteBronce extends Cliente {
     * Constructor que reciba como parámetros los atributos de la superclase Cliente
     (nombre, identificacion, categoria y edad), los pedidos del mes y la fecha del último pedido
     * estableciendo el pedido gratis disponible como falso y el descuento acumulado en 0
-    Este escenario se usa para cuando el cliente ya gastó su pedido gratis y cuando su indicador
-    * de descuento se resetea.
+    Este escenario se usa para cuando el cliente ya gastó su pedido gratis y cuando su indicador de descuento se resetea.
     * * */
 
     public ClienteBronce(String nombre, int identificacion, char categoria, short edad, int pedidosDelMes, String fechaUltimoPedido) {
