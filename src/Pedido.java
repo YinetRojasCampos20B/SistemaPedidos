@@ -26,7 +26,67 @@ public class Pedido {
 
     // Método para calcular el total de una compra hecha por el cliente
 
-    public double calcularTotalCompra(Producto[]) {
-
+    public double calcularTotalCompra(Producto[] productos) {
+        for (int i = 0; i < productos.length; i++) {
+            total += productos[i].getPrecio();
+        }
+        return total;
     }
+
+    // Método para imprimir el total en consola
+
+    /*
+    * GETTERS Y SETTERS DE LA CLASE PEDIDO
+    * */
+
+    // Objeto de la clase Cliente
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    // Arreglo de objetos de la clase Producto
+
+    public Producto[] getProductos() {
+        return productos;
+    }
+
+    public void setProductos(Producto[] productos) {
+        this.productos = productos;
+    }
+
+    // Cantidad de productos
+
+    public int getCantidadProductos() {
+        return cantidadProductos;
+    }
+
+    public void setCantidadProductos(int cantidadProductos) {
+        this.cantidadProductos = cantidadProductos;
+    }
+
+    // Fecha del pedido
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
+
+    // Total del pedido
+
+    public double getTotal() {
+        return total;
+    }
+
+    public void setTotal(double total) {
+        this.total = total;
+    }
+
 }
