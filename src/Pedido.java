@@ -91,4 +91,26 @@ public class Pedido {
         this.total = total;
     }
 
+    /*
+    * Método para imprimir en consola los productos
+    *    contenidos dentro del pedido
+    * */
+
+    public String imprimirProductosPedido () {
+        String resultado = "";
+        for (int i = 0; i < cantidadProductos; i++) {
+            resultado += "Producto #" + i + ": " + productos[i];
+        }
+        return resultado;
+    }
+
+    /*
+    * Método override para imprimir datos de la clase Pedido
+    * */
+
+    @Override
+    public String toString() {
+         return "Pedido del cliente: "+cliente+"{ productos = "+imprimirProductosPedido()+ ", total = "+total+"}";
+    }
+
 }
