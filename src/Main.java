@@ -192,11 +192,11 @@ public class Main {
 
         // Creando tres objetos de pedidos dentro del arreglo de objetos de pedidos
 
-        pedidos[0] = new Pedido(cliente1, productos, cantidadProductos, "04/09/2025");
+        pedidos[0] = new Pedido(cliente1, productos, cantidadProductos, "04/09/2025"); // Pedido asociado a María Martínez
 
-        pedidos[1] = new Pedido(cliente1, productos, cantidadProductos, "09/07/2026");
+        pedidos[1] = new Pedido(clientePlata1, productos, cantidadProductos, "09/07/2026"); // Pedido asociado a Coco Rocha
 
-        pedidos[2] = new Pedido(cliente2, productos, cantidadProductos, "19/02/2026");
+        pedidos[2] = new Pedido(clienteDorado4, productos, cantidadProductos, "19/02/2026"); // Pedido asociado a John Doe Campos
 
         // Usando el método calcular el total de la compra de la clase Pedidos
 
@@ -247,6 +247,9 @@ public class Main {
         int optMenu;
 
         do {
+            System.out.println("---------------------------------------");
+            System.out.println("¡Hola, "+clienteSeleccionado.getNombre()+"!");
+            System.out.println("Selecciona una opción");
             System.out.println("1) Ver mi información");
             System.out.println("2) Consultar productos");
             System.out.println("3) Consultar mis pedidos");
@@ -257,6 +260,7 @@ public class Main {
             optMenu = entrada.nextInt();
 
             // Estructura switch para mostrar las diferentes opciones
+
 
             switch (optMenu) {
 
@@ -273,7 +277,7 @@ public class Main {
 
                     for (int i = 0; i < productos.length; i++) {
                         if (productos[i].getDisponible() == true) {
-                            imprimirDatosArreglos(productos);
+                            System.out.println(productos[i]);;
                         }
                     }
 
@@ -282,14 +286,23 @@ public class Main {
 
                     /* 3) CONSULTAR MIS PEDIDOS */
 
+                    // Bandera para saber si existe por lo menos un pedido asociado al cliente
+
+                    boolean tienePedidos = false;
+
                     // Recorrer el arreglo de objetos de pedidos para que imprima los pedidos asociados a un usuario por número de identificación
 
                     for (int i = 0; i < pedidos.length; i++) {
 
                         if (pedidos[i].getCliente().getIdentificacion() == clienteSeleccionado.getIdentificacion()) {
+                            tienePedidos = true;
                             System.out.println("Estos son tus pedidos: ");
-                            imprimirDatosArreglos(pedidos);
+                            System.out.println(pedidos[i]);
                         }
+                    }
+
+                    if (!tienePedidos) {
+                        System.out.println("No tienes pedidos en este momento :(");
                     }
                     break;
                 case 4:
