@@ -125,7 +125,34 @@ public class Main {
 
         ClienteDorado clienteDorado6 = new ClienteDorado("Madelein Jerez", 1821934443, 'B', (short) 19, 3, 3000);
 
+        /*
+        * INSTANCIACIÓN DE OBJETOS DE LA CLASE PRODUCTO
+        * */
 
+        /*
+        Creación de un arreglo de objetos, con un total de tres espacios, de la
+        clase Producto, con el propósito de almacenar esta cantidad de objetos en el arreglo
+        */
+
+        Producto[] productos = new Producto[3];
+
+        /* Instanciación de tres productos dentro del arreglo de productos
+        */
+
+        /* Usando el método constructor #1 para crear un objeto dentro del arreglo de objetos de productos, recibiendo todos los parámetros. Este escenario se usa cuando se conoce el nombre, el precio, el código, la disponibilidad y la categoría del producto
+         */
+
+        productos[1] = new Producto ("Jabon Rey en barra 1 unidad 250gr", 2500, 1,true, 'A'); // 'A' de Aseo
+
+        /* Usando el método constructor #2 para crear un objeto dentro del arreglo de objetos de productos, recibiendo el nombre, el precio, el código y la categoría, mientras su disponibilidad está en false. Este escenario se usa cuando hay un producto que se encuentra agotado y por ende, no está disponible para venderse
+         */
+
+        productos[2] = new Producto("Arroz Sonora Premium arroba 12,5 kg", 47500, 2, 'D'); // 'D' de Despensa
+
+        /* Usando el método constructor #3 para crear un objeto dentro del arreglo de objetos de productos, recibiendo el nombre, el precio, su disponibilidad y la categoría, mientras su código se establece en cero y su categoría en N de Ninguna. Este escenario se usa en caso de que haya un producto sin código determinado y que no tenga una categoría específica
+         */
+
+        productos[3] = new Producto ("Tomate chonto paquete 5u", 2000, false);
 
         //  Imprimir los valores de los atributos de cada objeto creado a partir de la superclase Cliente
 
@@ -150,7 +177,6 @@ public class Main {
         System.out.println(clientePlata4);
         System.out.println(clientePlata5);
         System.out.println(clientePlata6);
-
 
 
 

@@ -10,7 +10,7 @@ public class Producto {
     private double precio;
     private int codigo;
     private boolean disponible;
-    private char categoria; // 'V' para Víveres, 'A' para Aseo, 'C' para Cuidado Personal
+    private char categoria; // 'V' para Víveres, 'A' para Aseo, 'C' para Cuidado Personal, 'D' de Despensa
 
     /*
     * MÉTODOS CONSTRUCTORES DE LA CLASE PRODUCTO
