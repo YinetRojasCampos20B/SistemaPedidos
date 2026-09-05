@@ -172,6 +172,24 @@ public class Main {
 
         imprimirDatosArreglos(todosLosClientes);
 
+        /*
+        * Inicializando una variable de conteo de productos mediante el llamado al método contarProductos
+        * */
+
+        int cantidadProductos = contarProductos(productos);
+
+        /*
+        * INSTANCIACIÓN DE OBJETOS DE LA CLASE PEDIDO
+        * */
+
+        /*
+        *
+        * */
+
+        Pedido pedido1 = new Pedido(cliente1, productos, cantidadProductos, "04/09/2025");
+        pedido1.calcularTotalCompra();
+        System.out.println(pedido1);
+
 
 
     }
