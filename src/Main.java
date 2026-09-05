@@ -154,14 +154,11 @@ public class Main {
 
         productos[2] = new Producto ("Tomate chonto paquete 5u", 2000, false);
 
-        /*
-        Creando una estructura cíclica que permita recorrer el arreglo de objetos de productos
-        para mostrar sus detalles en la consola
+        /* Invocando al método auxiliar imprimirDatosArreglos, otorgandole como argumento el arreglo
+        de objetos de los productos, con la finalidad de mostrar su información en la consola
          */
 
-        for (int i = 0; i < productos.length; i++) {
-            System.out.println(productos[i]);
-        }
+        imprimirDatosArreglos(productos);
 
         /*
         * INSTANCIANDO UN ARREGLO DE OBJETOS PARA SIMPLIFICAR LA IMPRESIÓN DE LOS CLIENTES Y EVITAR EL SOBREUSO DE LA CLÁUSULA SYSTEM.OUT
@@ -169,12 +166,11 @@ public class Main {
 
         Cliente[] todosLosClientes = {cliente1, cliente2, cliente3, clienteBronce1, clienteBronce2, clienteBronce3, clienteBronce4, clienteBronce5, clienteBronce6, clientePlata1, clientePlata2, clientePlata3, clientePlata4, clientePlata5, clientePlata6, clienteDorado1, clienteDorado2, clienteDorado3, clienteDorado4,clienteDorado5, clienteDorado6};
 
-        /* Usando un ciclo "for", el cual recorra todo el arreglo de objetos y los imprima en consola según su índice */
+        /* Invocando al método auxiliar imprimirDatosArreglos, otorgandole como argumento el arreglo
+        de objetos de todos los clientes, con la finalidad de imprimir sus datos en consola
+         */
 
-        for (int i = 0; i < todosLosClientes.length; i++) {
-            System.out.println(todosLosClientes[i]);
-
-        }
+        imprimirDatosArreglos(todosLosClientes);
 
     }
 
