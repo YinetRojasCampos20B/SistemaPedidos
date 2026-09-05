@@ -18,7 +18,7 @@ public class Main {
         Cliente cliente2 = new Cliente("Fernando Fernandez", 1234567884, (short) 32);
 
         /* Instanciación de objetos de Cliente, usando el método constructor que recibe el nombre,
-         * identificación y edad, sin recibir la edad
+         * identificación y categoría, sin recibir la edad
          * y estableciendo cero (0) por defecto internamente */
 
         Cliente cliente3 = new Cliente( "Emma Mary Tiglao", 1234567893, 'B');
@@ -34,30 +34,98 @@ public class Main {
 
         ClienteBronce clienteBronce1 = new ClienteBronce( "Mario Hernandez", 1234567892, 'A', (short) 20, false, 0, 0.15, "04/09/2025");
 
+        ClienteBronce clienteBronce2 = new ClienteBronce( "Rainelis Rosario Rojas", 1434567599, 'B', (short) 21, true, 1, 0.05, "01/09/2026");
+
         /* Instanciación de objetos de ClienteBronce, usando el método constructor #2, recibiendo como parámetros los atributos de la superclase Cliente (nombre, identificacion, categoria y edad), pero que va a establecer internamente el pedido gratis como verdadero, el descuento acumulado como 0 y la fecha del último pedido como No hay pedidos realizados
         Este es un objeto que representa un cliente ordinario, que recién se encuentra en la membresía de Cliente Bronce
         * */
 
-        ClienteBronce clienteBronce2 = new ClienteBronce( "Donatella Versace", 1234567891, 'A', (short) 68);
+        ClienteBronce clienteBronce3 = new ClienteBronce( "Donatella Versace", 1234567891, 'A', (short) 68);
+
+        ClienteBronce clienteBronce4 = new ClienteBronce( "Katrina Anne Johnson", 1054567192, 'B', (short) 22);
 
         /* Instanciación de objetos de ClienteBronce, usando el método constructor #3, recibiendo como parámetros los atributos de la superclase Cliente (nombre, identificacion, categoria y edad), los pedidos del mes y la fecha del último pedido
         * estableciendo el pedido gratis disponible como falso y el descuento acumulado en 0
         Este es un objeto que representa un escenario para cuando el cliente ya gastó su pedido gratis y cuando su indicador de descuento se resetea a cero (0)
         * */
 
-        ClienteBronce clienteBronce3 = new ClienteBronce("Juan Carlos Galliano Guillén", 1234567899, 'A', (short) 65,1, "02/09/2026");
+        ClienteBronce clienteBronce5 = new ClienteBronce("Juan Carlos Galliano Guillén", 1234567899, 'A', (short) 65,1, "02/09/2026");
+
+        ClienteBronce clienteBronce6 = new ClienteBronce("Diana Belmonte Ramos", 1230567881, 'B', (short) 22,0, "02/01/2026");
 
         /*
         INSTANCIACIÓN DE OBJETOS: Clase hija ClientePlata
          */
 
         /*
-        * Instaciación de un objeto clientePlata1, haciendo uso del método constructor #1 que recibe como parámetros todos los atributos de la super clase Cliente
+        * Instaciación de dos objetos ClientePlata, haciendo uso del método constructor #1 que recibe como parámetros todos los atributos de la super clase Cliente
         *    (nombre, identificación, categoría, edad) y sus atributos propios (probabilidad
         * de cashback, el cashback disponible este semestre, las compras de este semestre y la fecha del último cashback). Este objeto representa a un cliente ordinario que haya sido trasladado a la membresía ClientePlata
         */
 
         ClientePlata clientePlata1 = new ClientePlata ("Coco Rocha",1123456788, 'B', (short) 34, 0.1, false, 2, "09/07/2026");
+
+        ClientePlata clientePlata2 = new ClientePlata ("Miranda Kerr",1123456782, 'A', (short) 43, 0.01, true, 1, "01/08/2026");
+
+        /*
+         * Instaciación de dos objetos ClientePlata, haciendo uso del método constructor #2 que recibe como parámetros todos los atributos de la super clase Cliente
+         *    (nombre, identificación, categoría, edad) y los atributos propios de la clase hija  ClientePlata, en este caso,
+         * específicamente las compras en el semestre y la fecha del último cashback, asignando
+         * un valor false al cashback disponible y cero a la probabilidad del cashback
+         *  Este objeto representa a un cliente con membresía Plata que ya haya gastado su cashback
+         */
+
+        ClientePlata clientePlata3 = new ClientePlata("Raymond Sinaragua Uchiha", 1009289998, 'A', (short) 41, 10, "19/07/2026");
+
+        ClientePlata clientePlata4 = new ClientePlata("Gwen Marie Bolinnee", 1010987654, 'A', (short) 41, 10, "19/07/2026");
+
+        /*
+         * Instaciación de dos objetos ClientePlata, haciendo uso del método constructor #3 que recibe como parámetros todos los atributos de la super clase Cliente
+         *    (nombre, identificación, categoría, edad) y los atributos propios de la clase Cliente Plata, específicamente
+         * la probabilidad de cashback y la fecha del último cashback realizado
+         *  Este objeto representa a un cliente con membresía Plata que no tengan compras realizadas en el semestre pero que tengan historial de probabilidad y fecha de último pedido
+         */
+
+        ClientePlata clientePlata5 = new ClientePlata("Tharine Botez Drews", 1121234566,'B', (short) 19, 0.02, "8/05/2026");
+
+        ClientePlata clientePlata6 = new ClientePlata("Adriana Lime Lajas", 1131334986,'A', (short) 45, 0.02, "8/05/2026");
+
+
+        /*
+        INSTANCIACIÓN DE OBJETOS: Clase hija ClienteDorado
+         */
+
+        /*
+         * Instaciación de dos objetos ClienteDorado, haciendo uso del método constructor #1 que recibe como parámetros todos los atributos de la super clase Cliente
+         *    (nombre, identificación, categoría, edad) y los atributos propios y todos los atributos de la clase ClienteDorado (pedidos gratis restantes, total de pedidos histórico, monto descuento de compra y si ya usó el descuento de compra. Se usa en el dado caso de que ya se tengan todos estos parámetros
+
+         */
+
+        ClienteDorado clienteDorado1 = new ClienteDorado("Jinny Kardashian Ramos", 1000987654, 'B', (short) 20, (short) 4, 5, 5000,false);
+
+        ClienteDorado clienteDorado2 = new ClienteDorado("Isabella Nobara Menin", 1010793612, 'A', (short) 25, (short) 3, 7, 10000, false);
+
+        /*
+         * Instaciación de dos objetos ClienteDorado, haciendo uso del método constructor #2 que recibe como parámetros todos los atributos de la super clase Cliente
+         *    (nombre, identificación, categoría, edad) y los atributos propios y y los atributos de la clase ClienteDorado, en este caso, serían el total de pedidos histórico, el monto descuento de la compra y si ya usó el descuento de compra, estableciendo de manera predeterminada los pedidos gratis restantes en cero (0). Este escenario sse usa cuando los pedidos gratis que poseía el cliente dorado ya fueron gastados en el mes en curso
+
+         */
+
+        ClienteDorado clienteDorado3 = new ClienteDorado("Karly Marina Rojas", 1111239872, 'B', (short) 33, 20, 30000, false);
+
+        ClienteDorado clienteDorado4 = new ClienteDorado("John Doe Campos", 1120232817, 'A', (short) 23, 2, 2500, false);
+
+
+        /*
+         * Instaciación de dos objetos ClienteDorado, haciendo uso del método constructor #3 que recibe como parámetros todos los atributos de la super clase Cliente
+         *    (nombre, identificación, categoría, edad) y los atributos de la clase ClienteDorado, como el total de pedidos histórico, el monto descuento de la compra y si ya usó el descuento de compra), estableciendo por defecto los pedidos gratis restantes en seis (6) y el descuento de la compra en false. Es usado en un escenario cuando un cliente ordinario pasa a ostentar una membresía dorada
+         */
+
+        ClienteDorado clienteDorado5 = new ClienteDorado("Karlee Annie Madison", 1212198743, 'A', (short) 55, 2, 0);
+
+        ClienteDorado clienteDorado6 = new ClienteDorado("Madelein Jerez", 1821934443, 'B', (short) 19, 3, 3000);
+
+
 
         //  Imprimir los valores de los atributos de cada objeto creado a partir de la superclase Cliente
 
@@ -70,5 +138,21 @@ public class Main {
         System.out.println(clienteBronce1);
         System.out.println(clienteBronce2);
         System.out.println(clienteBronce3);
+        System.out.println(clienteBronce4);
+        System.out.println(clienteBronce5);
+        System.out.println(clienteBronce6);
+
+        // Imprimir los valores de los atributos de cada objeto creado a partir de la clase hija ClientePlata
+
+        System.out.println(clientePlata1);
+        System.out.println(clientePlata2);
+        System.out.println(clientePlata3);
+        System.out.println(clientePlata4);
+        System.out.println(clientePlata5);
+        System.out.println(clientePlata6);
+
+
+
+
     }
 }
