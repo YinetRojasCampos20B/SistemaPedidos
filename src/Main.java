@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -183,15 +185,124 @@ public class Main {
         * */
 
         /*
+        * Instanciando un arreglo de objetos para almacenar los pedidos
+        * */
+
+        Pedido[] pedidos = new Pedido[3];
+
+        // Creando tres objetos de pedidos dentro del arreglo de objetos de pedidos
+
+        pedidos[0] = new Pedido(cliente1, productos, cantidadProductos, "04/09/2025");
+
+        pedidos[1] = new Pedido(cliente1, productos, cantidadProductos, "09/07/2026");
+
+        pedidos[2] = new Pedido(cliente2, productos, cantidadProductos, "19/02/2026");
+
+        // Usando el método calcular el total de la compra de la clase Pedidos
+
+        pedidos[0].calcularTotalCompra();
+        pedidos[1].calcularTotalCompra();
+        pedidos[2].calcularTotalCompra();
+
+        /*
+        * PROGRAMA DE PRUEBA PARA EMULAR UNA EJECUCIÓN EXITOSA EN
+        * EL SISTEMA DE PEDIDOS
         *
         * */
 
-        Pedido pedido1 = new Pedido(cliente1, productos, cantidadProductos, "04/09/2025");
-        pedido1.calcularTotalCompra();
-        System.out.println(pedido1);
+        // Llamando a la utilidad Scanner para recibir datos ingresados desde el teclado
+
+        Scanner entrada = new Scanner(System.in);
 
 
+        // Inicio del programa emulador
 
+        System.out.println("-----------------------------------------");
+        System.out.println("-------------PROGRAMA EMULADOR-----------");
+        System.out.println("-----------------------------------------");
+
+        // Mostrar la lista de clientes
+
+        System.out.println("¡Bienvenido al programa emulador de prueba");
+        System.out.println("para el sistema de pedidos!");
+
+        System.out.println("-----------------------------------------");
+
+        System.out.println("Seleccione un cliente: ");
+
+        /* Ciclo for que recorre el arreglo de objetos de clientes para imprimirlos en pantalla. No se usa el método de impresión, porque
+        aquí sólo se va a mostrar el nombre del cliente. Se va a obtener
+        mediante un método getter de la superclase Cliente*/
+
+        for (int i = 0; i < todosLosClientes.length; i++) {
+            System.out.println(i + ") "+todosLosClientes[i].getNombre());
+        }
+
+        int opcion = entrada.nextInt();
+
+        // Seleccionando el cliente del arreglo de objetos que contiene a todos los clientes
+
+        Cliente clienteSeleccionado = todosLosClientes[opcion];
+
+        int optMenu;
+
+        do {
+            System.out.println("1) Ver mi información");
+            System.out.println("2) Consultar productos");
+            System.out.println("3) Consultar mis pedidos");
+            System.out.println("4) Salir");
+
+            // Leer opción del menú
+
+            optMenu = entrada.nextInt();
+
+            // Estructura switch para mostrar las diferentes opciones
+
+            switch (optMenu) {
+
+                // 1) VER MI INFORMACIÓN
+
+                case 1:
+                    System.out.println(clienteSeleccionado);
+                    break;
+                // 2) VER LOS PRODUCTOS DISPONIBLES DE LA TIENDA
+                case 2:
+                    System.out.println("Estos son todos los productos de la tienda: ");
+
+                    // Verificar que los productos de la tienda estén disponibles, y los imprima en consola
+
+                    for (int i = 0; i < productos.length; i++) {
+                        if (productos[i].getDisponible() == true) {
+                            imprimirDatosArreglos(productos);
+                        }
+                    }
+
+                    break;
+                case 3:
+
+                    /* 3) CONSULTAR MIS PEDIDOS */
+
+                    // Recorrer el arreglo de objetos de pedidos para que imprima los pedidos asociados a un usuario por número de identificación
+
+                    for (int i = 0; i < pedidos.length; i++) {
+
+                        if (pedidos[i].getCliente().getIdentificacion() == clienteSeleccionado.getIdentificacion()) {
+                            System.out.println("Estos son tus pedidos: ");
+                            imprimirDatosArreglos(pedidos);
+                        }
+                    }
+                    break;
+                case 4:
+
+                    /* 4) SALIR*/
+
+                    System.out.println("¡Muchas gracias por usar el sistema de pedidos!");
+                    break;
+                default:
+                    System.out.println("Esa opción no es válida :(");
+            }
+
+        } while (optMenu != 4);
     }
 
     /*
