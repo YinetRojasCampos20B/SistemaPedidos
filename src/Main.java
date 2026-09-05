@@ -154,31 +154,17 @@ public class Main {
 
         productos[3] = new Producto ("Tomate chonto paquete 5u", 2000, false);
 
-        //  Imprimir los valores de los atributos de cada objeto creado a partir de la superclase Cliente
+        /*
+        * INSTANCIANDO UN ARREGLO DE OBJETOS PARA SIMPLIFICAR LA IMPRESIÓN DE LOS CLIENTES Y EVITAR EL SOBREUSO DE LA CLÁUSULA SYSTEM.OUT
+        * */
 
-        System.out.println(cliente1);
-        System.out.println(cliente2);
-        System.out.println(cliente3);
+        Cliente[] todosLosClientes = {cliente1, cliente2, cliente3, clienteBronce1, clienteBronce2, clienteBronce3, clienteBronce4, clienteBronce5, clienteBronce6, clientePlata1, clientePlata2, clientePlata3, clientePlata4, clientePlata5, clientePlata6, clienteDorado1, clienteDorado2, clienteDorado3, clienteDorado4,clienteDorado5, clienteDorado6};
 
-        // Imprimir los valores de los atributos de cada objeto creado a partir de la clase hija ClienteBronce
+        /* Usando un ciclo "for", el cual recorra todo el arreglo de objetos y los imprima en consola según su índice */
 
-        System.out.println(clienteBronce1);
-        System.out.println(clienteBronce2);
-        System.out.println(clienteBronce3);
-        System.out.println(clienteBronce4);
-        System.out.println(clienteBronce5);
-        System.out.println(clienteBronce6);
+        for (int i = 0; i < todosLosClientes.length; i++) {
+            System.out.println(todosLosClientes[i]);
 
-        // Imprimir los valores de los atributos de cada objeto creado a partir de la clase hija ClientePlata
-
-        System.out.println(clientePlata1);
-        System.out.println(clientePlata2);
-        System.out.println(clientePlata3);
-        System.out.println(clientePlata4);
-        System.out.println(clientePlata5);
-        System.out.println(clientePlata6);
-
-
-
+        }
     }
 }
