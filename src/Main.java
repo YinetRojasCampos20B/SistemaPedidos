@@ -175,5 +175,18 @@ public class Main {
             System.out.println(todosLosClientes[i]);
 
         }
+
+    }
+
+    /*
+     *
+     * FUNCIONES AUXILIARES DEL PROGRAMA PRINCIPAL
+     *
+     * */
+
+    public static void imprimirDatosArreglos (Object[] arreglo) {
+        for (int i = 0; i < arreglo.length; i++) {
+            System.out.println(arreglo[i]);
+        }
     }
 }
