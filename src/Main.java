@@ -172,6 +172,8 @@ public class Main {
 
         imprimirDatosArreglos(todosLosClientes);
 
+
+
     }
 
     /*
@@ -180,9 +182,25 @@ public class Main {
      *
      * */
 
+    // Función para imprimir datos de los arreglos de objetos
+
     public static void imprimirDatosArreglos (Object[] arreglo) {
         for (int i = 0; i < arreglo.length; i++) {
             System.out.println(arreglo[i]);
         }
     }
+
+    // Función para contar la cantidad de productos (función escalable)
+
+    public static int contarProductos(Producto[] arregloProductos) {
+        int contador = 0;
+        for(int i = 0; i < arregloProductos.length; i++) {
+            if (arregloProductos[i] != null) {
+                contador++;
+            }
+        }
+        return contador;
+    }
+
+
 }
