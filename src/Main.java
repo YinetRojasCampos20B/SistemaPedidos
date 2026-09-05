@@ -155,6 +155,15 @@ public class Main {
         productos[2] = new Producto ("Tomate chonto paquete 5u", 2000, false);
 
         /*
+        Creando una estructura cíclica que permita recorrer el arreglo de objetos de productos
+        para mostrar sus detalles en la consola
+         */
+
+        for (int i = 0; i < productos.length; i++) {
+            System.out.println(productos[i]);
+        }
+
+        /*
         * INSTANCIANDO UN ARREGLO DE OBJETOS PARA SIMPLIFICAR LA IMPRESIÓN DE LOS CLIENTES Y EVITAR EL SOBREUSO DE LA CLÁUSULA SYSTEM.OUT
         * */
 
